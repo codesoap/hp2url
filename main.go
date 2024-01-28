@@ -64,9 +64,9 @@ func extractPath(req string) string {
 	if i == -1 || i == len(req)-1 {
 		return ""
 	}
-	j := i + 1 + strings.Index(req[i+1:], " ")
+	j := strings.Index(req[i+1:], " ")
 	if j == -1 {
 		return ""
 	}
-	return req[i+1 : j]
+	return req[i+1 : i+1+j]
 }
